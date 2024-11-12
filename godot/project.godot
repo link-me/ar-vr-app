@@ -1,0 +1,9 @@
+; Godot 4 project
+config_version=5
+
+[application]
+config/name="AR/VR App"
+run/main_scene="res://scenes/Main.tscn"
+
+[rendering]
+renderer/rendering_method="forward_plus"
