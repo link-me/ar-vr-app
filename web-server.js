@@ -3,10 +3,13 @@ const fs = require('fs');
 const path = require('path');
 
 const PORT = process.env.PORT || 9091;
-// Prefer serving Godot HTML5 export if present, otherwise fall back to demo
+// Serve demo by default; allow forcing build via env USE_BUILD=1
 const BUILD_ROOT = path.join(__dirname, 'godot', 'web', 'build');
 const DEMO_ROOT = path.join(__dirname, 'godot', 'web');
-const ROOT = fs.existsSync(path.join(BUILD_ROOT, 'index.html')) ? BUILD_ROOT : DEMO_ROOT;
+// Prefer build when present; allow forcing demo by USE_BUILD=0
+const hasBuild = fs.existsSync(path.join(BUILD_ROOT, 'index.html'));
+const forceDemo = process.env.USE_BUILD === '0';
+const ROOT = (!forceDemo && hasBuild) ? BUILD_ROOT : DEMO_ROOT;
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -39,7 +42,12 @@ const server = http.createServer((req, res) => {
       return;
     }
     const ext = path.extname(filePath).toLowerCase();
-    res.writeHead(200, { 'Content-Type': MIME[ext] || 'application/octet-stream' });
+    res.writeHead(200, {
+      'Content-Type': MIME[ext] || 'application/octet-stream',
+      'Cache-Control': 'no-store, no-cache, must-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0'
+    });
     fs.createReadStream(filePath).pipe(res);
   });
 });

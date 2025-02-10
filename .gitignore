@@ -1,19 +1,34 @@
+# Godot project ignores
+.godot/
+.import/
+*.tmp
+*.cache
+
+# Web build artifacts (committed to repo to run without Godot)
+# Веб‑билд включён в git для запуска из браузера без Godot
+
+# Node/JS
 node_modules/
-.venv/
-venv/
-__pycache__/
-.target/
-obj/
-bin/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS-specific junk
 .DS_Store
 Thumbs.db
-*.log
+Desktop.ini
 
-# Godot project cache/imports
-godot/.godot/
-godot/.import/
-godot/export_presets.cfg
-
-# Private local usage doc (do not track)
-PRIVATE_USAGE.local.md
+# Archives/binaries (rare, but keep repo clean)
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.exe
+*.dll
+*.so
 
