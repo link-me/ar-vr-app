@@ -71,7 +71,6 @@
 — `scenes/Main.tscn` — главная сцена
 — `scripts/*.gd` — логика: `Player.gd`, `Game.gd`, `Segment.gd`, `Food.gd`, `Spikes.gd`
 — `assets/` — ресурсы (текстуры и пр.)
-— `godot/web/build/` — веб‑сборка (не коммитится)
 — `godot/web/build/` — веб‑сборка (коммитится; запуск без Godot возможен)
 — `web-server.js` — простой сервер (по умолчанию раздаёт билд)
 
@@ -83,4 +82,4 @@
 
 ## Лицензия
 
-Внутренний проект. См. `PRIVATE_USAGE.txt` при наличии.
+MIT — см. файл `LICENSE` в корне проекта.

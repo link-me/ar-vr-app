@@ -35,3 +35,6 @@ Desktop.ini
 # Local tools (Godot export templates etc.) — do NOT track in Git
 .tools/
 
+# Private usage notes (do not store in repo)
+PRIVATE_USAGE*
+
