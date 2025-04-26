@@ -1,4 +1,4 @@
-﻿node_modules/
+node_modules/
 .venv/
 venv/
 __pycache__/
@@ -8,4 +8,12 @@ bin/
 .DS_Store
 Thumbs.db
 *.log
+
+# Godot project cache/imports
+godot/.godot/
+godot/.import/
+godot/export_presets.cfg
+
+# Private local usage doc (do not track)
+PRIVATE_USAGE.local.md
 
