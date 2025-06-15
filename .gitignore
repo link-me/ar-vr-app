@@ -32,3 +32,6 @@ Desktop.ini
 *.dll
 *.so
 
+# Local tools (Godot export templates etc.) — do NOT track in Git
+.tools/
+
