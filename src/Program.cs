@@ -1,2 +1,3 @@
 ﻿using System;
 class Program{ static void Main(){ Console.WriteLine("Demo start"); } }
+// Setup CI
