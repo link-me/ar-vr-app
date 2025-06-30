@@ -2,3 +2,4 @@
 
 - 2025-06-23: Setup CI
 - 2025-06-29: Add tests
+- 2025-06-30: Code cleanup
