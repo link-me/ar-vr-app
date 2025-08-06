@@ -7,3 +7,4 @@
 - 2025-07-01: Code cleanup
 - 2025-07-07: Fix auth bug
 - 2025-07-09: Enhance logging
+- 2025-08-06: Add tests
