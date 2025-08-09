@@ -9,3 +9,4 @@
 - 2025-07-09: Enhance logging
 - 2025-08-06: Add tests
 - 2025-08-08: Add tests
+- 2025-08-09: Fix auth bug
