@@ -10,3 +10,4 @@
 - 2025-08-06: Add tests
 - 2025-08-08: Add tests
 - 2025-08-09: Fix auth bug
+- 2025-08-17: Fix auth bug
