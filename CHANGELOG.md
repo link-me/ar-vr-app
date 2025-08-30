@@ -14,3 +14,4 @@
 - 2025-08-23: Code cleanup
 - 2025-08-26: Fix auth bug
 - 2025-08-30: Update dependencies
+- 2025-08-30: Improve performance
