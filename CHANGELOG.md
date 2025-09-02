@@ -15,3 +15,4 @@
 - 2025-08-26: Fix auth bug
 - 2025-08-30: Update dependencies
 - 2025-08-30: Improve performance
+- 2025-09-02: Add tests
