@@ -16,3 +16,4 @@
 - 2025-08-30: Update dependencies
 - 2025-08-30: Improve performance
 - 2025-09-02: Add tests
+- 2025-09-08: Update docs
