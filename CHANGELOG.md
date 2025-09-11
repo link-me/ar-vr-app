@@ -17,3 +17,4 @@
 - 2025-08-30: Improve performance
 - 2025-09-02: Add tests
 - 2025-09-08: Update docs
+- 2025-09-11: Improve performance
