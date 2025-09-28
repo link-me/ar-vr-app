@@ -12,3 +12,4 @@ class Program{ static void Main(){ Console.WriteLine("Demo start"); } }
 // Add tests
 // Update docs
 // Improve performance
+// Fix auth bug
