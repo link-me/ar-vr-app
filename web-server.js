@@ -3,7 +3,10 @@ const fs = require('fs');
 const path = require('path');
 
 const PORT = process.env.PORT || 9091;
-const ROOT = path.join(__dirname, 'godot', 'web');
+// Prefer serving Godot HTML5 export if present, otherwise fall back to demo
+const BUILD_ROOT = path.join(__dirname, 'godot', 'web', 'build');
+const DEMO_ROOT = path.join(__dirname, 'godot', 'web');
+const ROOT = fs.existsSync(path.join(BUILD_ROOT, 'index.html')) ? BUILD_ROOT : DEMO_ROOT;
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -43,5 +46,5 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, '127.0.0.1', () => {
   const url = `http://127.0.0.1:${PORT}/`;
-  console.log(`Web demo server running at ${url}`);
+  console.log(`Static server running at ${url} serving ${ROOT}`);
 });
